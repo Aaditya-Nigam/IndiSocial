@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
 }
 
 :root{
@@ -26,6 +27,7 @@ body{
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem; 
 }
 
 .flex{
@@ -42,7 +44,6 @@ body{
 .nav{
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
 }
 
 .logo-container .heading{
@@ -81,4 +82,82 @@ body{
 .profile-photo{
     height: 2.5rem;
     border-radius: 50%;
+}
+
+/* -----------------------------main------------------------------------------ */
+.main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.left{
+    position: relative;
+}
+
+.profile-section{
+    background-color: white;
+    padding: 0.8rem 0.9rem;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.profile-section .heading{
+    font-size: 1rem;
+}
+
+.profile-section .id{
+    font-size: 0.8rem;
+    color: var(--color-light-grey);
+    font-weight: 400;
+}
+
+.main .menu-section{
+    margin: 1rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.main .menu-section .active{
+    background-color: var(--color-background);
+    border-left: 7px solid var(--color-base-color);
+    color: var(--color-base-color);
+}
+
+.main .menu-section li{
+    padding: 1rem 2rem;
+    gap: 1.6rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.main .menu-section li:hover{
+    color: var(--color-base-color);
+}
+
+.main .create-container{
+    justify-content: center;
+}
+
+.main .create-post{
+    background-color: var(--color-base-color);
+    padding: 0.7rem 3rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+
+
+
+.left, .center, .right{
+    height: 85vh;
+    overflow-y: auto;
+}
+
+.left::-webkit-scrollbar, .center::-webkit-scrollbar, .right::-webkit-scrollbar{
+    display: none;
 }
