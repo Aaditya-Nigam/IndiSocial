@@ -32,6 +32,7 @@ body{
 
 .flex{
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 
@@ -93,6 +94,8 @@ body{
     position: relative;
 }
 
+/* --------------left---------------------- */
+
 .left{
     position: relative;
 }
@@ -150,9 +153,6 @@ body{
     color: white;
 }
 
-
-
-
 .left, .center, .right{
     height: 85vh;
     overflow-y: auto;
@@ -160,4 +160,78 @@ body{
 
 .left::-webkit-scrollbar, .center::-webkit-scrollbar, .right::-webkit-scrollbar{
     display: none;
+}
+
+/* -------------center--------------- */
+.stories-container{
+    gap: 10px;
+    position: relative;
+    width: fit-content;
+}
+
+.story{
+    color: rgb(255, 255, 255);
+    height: 210px;
+    width: 110px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.story::before{
+    content: "";
+    display: block;
+    height: 100px;
+    width: 110px;
+    background: linear-gradient(transparent,rgba(0,0,0,0.75));
+    position: absolute;
+    bottom: 0;
+    border-radius: 15px;
+}
+
+.story .profile-photo{
+    align-self: center;
+    border: 2px solid var(--color-base-color);
+}
+
+.story .name{
+    z-index: 2;
+}
+
+.story:nth-child(1){
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo5LDTzkWe-_YnFSr8hXb1io5F22ZVJa8b4A&s");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story:nth-child(2){
+    background: url("https://wallpapers.com/images/high/vertical-pictures-r93cdchwdse79vvv.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story:nth-child(3){
+    background: url("https://cdn.pixabay.com/photo/2023/10/23/17/53/bird-8336583_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story:nth-child(4){
+    background: url("https://w0.peakpx.com/wallpaper/426/919/HD-wallpaper-vertical-stars-dark-sky-reflection.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story:nth-child(5){
+    background: url("https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2013/08/1.-Moraine_final.jpg?w=600&h=1260&ssl=1");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.story:nth-child(6){
+    background: url("https://img.freepik.com/free-photo/vertical-shot-wooden-bridge-middle-forest_181624-39776.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
