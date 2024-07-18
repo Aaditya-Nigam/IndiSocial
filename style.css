@@ -25,7 +25,7 @@ body{
 
 /* ----utility class---- */
 .container{
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem; 
 }
@@ -332,4 +332,153 @@ input{
 
 .liked-container p span{
     font-weight: 700;
+}
+
+
+/* ----------------------------------------right----------------------------------------- */
+
+/* -----------------message-section------------------ */
+.messages-section{
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.6rem 0.8rem;
+}
+
+.messages-section .header{
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.messages-section .header h3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.messages-section .header img{
+    height: 1.5rem;
+}
+
+.messages-section .search-container {
+    width: 100%;
+}
+
+.messages-section .search-container img{
+    height: 1.2rem;
+}
+
+.messages-section .search-container .search-box{
+    width: 100%;
+}
+
+.messages-section .headings{
+    margin: 10px 0;
+    padding: 3px 0px;
+    justify-content: space-between;
+}
+
+.messages-section .headings h4{
+    font-size: 0.9rem;
+    width: 100%;
+    border-bottom: 5px solid rgb(212, 211, 211);
+    text-align: center;
+}
+
+.messages-section .headings .active{
+    border-bottom: 5px solid rgb(0,0,0);
+}
+
+.messages-section .messages .message{
+    gap: 10px;
+    padding: 7px 0;
+    position: relative;
+}
+
+.messages-section .messages .message .img-container{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.messages-section .messages .message div h4{
+    font-size: 0.9rem;
+}
+
+.messages-section .messages .message div p{
+    font-size: 0.75rem;
+    color: var(--color-light-grey);
+}
+
+.messages-section .messages .active .img-container::after{
+    content: "";
+    height: .5rem;
+    width: .5rem;
+    background-color: rgb(63, 199, 63);
+    border: 2px solid white;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 2.1rem;
+    left: 2rem;
+    z-index: 10;
+}
+
+.requests-section{
+    margin: 1rem 0;
+}
+
+.requests-section .heading{
+    font-size: 1rem;
+    color: var(--color-light-grey);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.requests-section .requests .request{
+    gap: 10px;
+    flex-direction: column;
+    background-color: white;
+    padding: 0.8rem 0.8rem;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.requests-section .requests .request .header{
+    gap: 1rem;
+}
+
+.requests-section .requests .request .header img{
+    height: 3rem;
+}
+
+.requests-section .requests .request .details .username{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.requests-section .requests .request .details .mutuals{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-light-grey);
+}
+
+.requests-section .requests .request .request-btns{
+    gap: 1rem;
+}
+
+.requests-section .requests .request .request-btns button{
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: rgb(224, 221, 221);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.requests-section .requests .request .request-btns .accept{
+    background-color: var(--color-base-color);
+    color: white;
+}
+
+.requests-section .requests .request .request-btns button:hover{
+    transform: scale(1.03);
 }
