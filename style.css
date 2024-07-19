@@ -155,7 +155,7 @@ body{
 }
 
 .left, .center, .right{
-    height: 85vh;
+    height: 88vh;
     overflow-y: auto;
 }
 
@@ -481,4 +481,103 @@ input{
 
 .requests-section .requests .request .request-btns button:hover{
     transform: scale(1.03);
+}
+
+
+@media screen and (max-width: 1200px) {
+    .main{
+        grid-template-columns: 2fr 5fr 2.4fr;
+    }
+
+    .messages-section .headings h4{
+        font-size: 0.8rem;
+        width: 100%;
+        border-bottom: 5px solid rgb(212, 211, 211);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html{
+        font-size: 12px;
+    }
+
+    .main{
+        grid-template-columns: 70px 5fr 2fr;
+    }
+
+    .nav{
+        justify-content: start;
+        gap: 2rem;
+    }
+
+    .nav-btns{
+        display: none;
+    }
+
+    .main .menu-section li{
+        justify-content: center;
+    }
+
+    .main .menu-section li a{
+        display: none;
+    }
+
+    .left .profile-section{
+        justify-content: center;
+    }
+
+    .left .profile-section div{
+        display: none;
+    }
+
+    .search-container{
+        width: 100%;
+    }
+
+    .search-box{
+        width: 100%;
+    }
+
+    .requests-section{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .main{
+        grid-template-columns: 5fr 2.4fr;
+    }
+
+    .container .left{
+        /* position: absolute; */
+        display: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .main{
+        grid-template-columns: auto;
+    }
+
+    .container .right{
+        display: none;
+    }
+
+    .container .left{
+        position: absolute;
+        display: block;
+        z-index: 10;
+        width: 50px;
+        right: 0;
+    }
+
+    .container .left .profile-section{
+        /* position: absolute; */
+        display: none;
+    }
+
+    .left .create-container{
+        display: none;
+    }
 }
